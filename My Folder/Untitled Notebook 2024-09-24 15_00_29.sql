@@ -80,3 +80,7 @@ WHERE name LIKE "A%"
 -- COMMAND ----------
 
 describe detail employees
+
+-- COMMAND ----------
+
+describe table employees
