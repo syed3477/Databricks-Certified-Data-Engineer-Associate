@@ -63,3 +63,123 @@ describe history employees
 -- COMMAND ----------
 
 -- MAGIC %fs ls 'dbfs:/user/hive/warehouse/employees/_delta_log'
+
+-- COMMAND ----------
+
+describe history employees
+
+-- COMMAND ----------
+
+SELECT * FROM employees VERSION AS OF 4
+
+-- COMMAND ----------
+
+select * from employees
+
+-- COMMAND ----------
+
+select * from employees as of v4
+
+-- COMMAND ----------
+
+select * from employees@v4
+
+-- COMMAND ----------
+
+describe history employees
+
+-- COMMAND ----------
+
+select * from employees@v6
+
+-- COMMAND ----------
+
+restore table employees@v4
+
+-- COMMAND ----------
+
+drop table employees
+
+-- COMMAND ----------
+
+select * from employees
+
+-- COMMAND ----------
+
+restore table employees
+
+-- COMMAND ----------
+
+undrop table employees
+
+-- COMMAND ----------
+
+select * from employees
+
+-- COMMAND ----------
+
+describe history employees
+
+-- COMMAND ----------
+
+select * from employees@v1
+
+-- COMMAND ----------
+
+select * from employees@v2
+
+-- COMMAND ----------
+
+delete from employees
+
+-- COMMAND ----------
+
+restore table employees@v4
+
+-- COMMAND ----------
+
+restore table employees@v3
+
+-- COMMAND ----------
+
+restore table employees as of version 4
+
+-- COMMAND ----------
+
+restore table employees to version@v4
+
+-- COMMAND ----------
+
+restore table employees to version as of 4
+
+-- COMMAND ----------
+
+select * from employees
+
+-- COMMAND ----------
+
+describe history employees 
+
+-- COMMAND ----------
+
+describe detail employees
+
+-- COMMAND ----------
+
+optimize employees zorder by id
+
+-- COMMAND ----------
+
+describe detail employees
+
+-- COMMAND ----------
+
+describe history employees
+
+-- COMMAND ----------
+
+vacuum employees
+
+-- COMMAND ----------
+
+
